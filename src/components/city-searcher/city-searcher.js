@@ -18,7 +18,7 @@ class CitySearcher extends Component {
 			.then((res) => res.json())
 			.then((json) => this.setState({ data: [...json] }))
 			.catch((err) => "This failed");
-	};
+	}
 
 	filter_city = (cities, word_to_search) => {
 		let regex = new RegExp(word_to_search, "gi");
@@ -68,9 +68,13 @@ class CitySearcher extends Component {
 
 	render() {
 		return (
-			<form class="search-form">
-				<input type="text" class="search" placeholder="City or State" />
-				<ul class="suggestions">
+			<form className="search-form">
+				<input
+					type="text"
+					className="search"
+					placeholder="City or State"
+				/>
+				<ul className="suggestions">
 					<li>Filter for a city</li>
 					<li>or a state</li>
 				</ul>
